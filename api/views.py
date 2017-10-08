@@ -21,6 +21,7 @@ def translate(request):
 
     #translate here
     words = jsonbody['responses'][0]['textAnnotations'][0]['description']
+    words = "Orthography\n\A single word in an Early Middle English text may\nhave as many as thirty differfent spellins\n"
 
     translatedText = translate_text(words, 'en')
 
@@ -35,7 +36,6 @@ def translate(request):
     result = ""
 
     for words in splitUpMenu:
-        print("hi")
         if (words == ''):
             continue
         else:
@@ -50,7 +50,7 @@ def get_format_text(splitUpWords):
     result = ""
     for word in splitUpWords:
         print(word)
-        checkit = Animal.objects.filter(animal_names__icontains=word)
+        checkit = Animal.objects.filter(animal_names__iexact=word)
         if checkit.exists():
             endangered = ProtectionStatus.objects.filter(animal_id=checkit[0])[0].animal_protection_status
             result += " " + "<span style = \"color:#FF0000;\">" + word + "(" + str(endangered) + ")" + "</span>"
