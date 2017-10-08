@@ -20,6 +20,4 @@ requests==2.18.4
 rsa==3.4.2
 six==1.10.0
 urllib3==1.22
-vboxapi==1.0
 virtualenv==15.1.0
-zope.interface==4.1.1
