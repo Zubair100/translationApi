@@ -6,6 +6,11 @@ from django.views.decorators.csrf import csrf_exempt
 from api.models import Animal, ProtectionStatus
 
 
+
+def test(request):
+    return HttpResponse("<h1> HIIII </h1>")
+
+
 @csrf_exempt
 def translate(request):
 
