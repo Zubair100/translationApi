@@ -21,7 +21,7 @@ def translate(request):
 
     #translate here
     words = jsonbody['responses'][0]['textAnnotations'][0]['description']
-    words = "Orthography\n\A single word in an Early Middle English text may\nhave as many as thirty differfent spellins\n"
+    # words = "Orthography\n\A single word in an Early Middle English text may\nhave as many as thirty differfent spellins\n"
 
     translatedText = translate_text(words, 'en')
 
