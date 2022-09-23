@@ -12,7 +12,7 @@ google-cloud-translate==1.2.0
 googleapis-common-protos==1.5.3
 httplib2==0.10.3
 idna==2.6
-protobuf==3.4.0
+protobuf==3.18.3
 pyasn1==0.3.7
 pyasn1-modules==0.1.4
 pytz==2017.2
